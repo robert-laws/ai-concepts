@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How LLMs Process Text - Interactive Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How Large Language Models Process Text</h1>
+            <p class="subtitle">An interactive guide to understanding tokenization and text generation</p>
+        </header>
+
+        <main>
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <h2>What is an LLM?</h2>
+                <p>Large Language Models (LLMs) like GPT, Claude, and others are AI systems that can understand and generate human language. But how do they actually process the text you give them?</p>
+
+                <div class="process-overview">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Text Input</h3>
+                        <p>You provide text to the model</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Tokenization</h3>
+                        <p>Text is broken into tokens</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Processing</h3>
+                        <p>Model analyzes patterns</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Text Output</h3>
+                        <p>New text is generated</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tokenization Explanation -->
+            <section class="explanation-section">
+                <h2>Understanding Tokenization</h2>
+                <div class="explanation-content">
+                    <div class="explanation-text">
+                        <p><strong>What are tokens?</strong></p>
+                        <p>Tokens are the basic units that LLMs use to understand text. They can be:</p>
+                        <ul>
+                            <li>Whole words (like "hello")</li>
+                            <li>Parts of words (like "ing" in "running")</li>
+                            <li>Individual characters or punctuation</li>
+                            <li>Spaces and special characters</li>
+                        </ul>
+                        <p>As a rough estimate, <strong>1 token ≈ 4 characters</strong> in English, or about <strong>3/4 of a word</strong>.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Why Tokenization?</h4>
+                        <p>Breaking text into tokens allows the model to:</p>
+                        <ul>
+                            <li>Handle any word, even ones it hasn't seen before</li>
+                            <li>Work efficiently with mathematical operations</li>
+                            <li>Understand patterns and relationships in language</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Demo -->
+            <section class="demo-section">
+                <h2>Try It Yourself!</h2>
+                <p>Type some text below and watch how it gets tokenized:</p>
+
+                <div class="input-area">
+                    <textarea id="user-input" placeholder="Type your text here... Try: 'The quick brown fox jumps over the lazy dog'"></textarea>
+                    <button id="tokenize-btn" class="primary-btn">Tokenize Text</button>
+                </div>
+
+                <div id="visualization" class="visualization hidden">
+                    <h3>Step 1: Your Input</h3>
+                    <div id="original-text" class="text-display"></div>
+
+                    <h3>Step 2: Tokenization</h3>
+                    <div id="tokenized-output" class="token-display"></div>
+                    <div id="token-count" class="token-stats"></div>
+
+                    <h3>Step 3: Processing</h3>
+                    <div class="processing-box">
+                        <div class="neural-network">
+                            <div class="layer">
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                            </div>
+                            <div class="layer">
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                            </div>
+                            <div class="layer">
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                            </div>
+                        </div>
+                        <p class="processing-description">The LLM processes these tokens through multiple layers of neural networks, analyzing patterns, context, and relationships to understand meaning and generate responses.</p>
+                    </div>
+
+                    <h3>Step 4: Output Generation</h3>
+                    <div class="output-box">
+                        <p>The model generates new tokens one at a time, each influenced by all previous tokens. This process continues until the response is complete.</p>
+                        <div id="generated-output" class="generated-text"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Concepts -->
+            <section class="concepts-section">
+                <h2>Key Concepts to Remember</h2>
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <h3>🔤 Tokenization</h3>
+                        <p>Text is split into smaller pieces (tokens) that the model can process mathematically.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>📊 Embeddings</h3>
+                        <p>Each token is converted into a series of numbers (vectors) that represent its meaning.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>🧠 Context</h3>
+                        <p>The model analyzes all tokens together to understand the full context and meaning.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>✨ Generation</h3>
+                        <p>New tokens are predicted one at a time based on patterns learned from training data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learn More -->
+            <section class="learn-more-section">
+                <h2>How Does This Actually Work?</h2>
+                <div class="technical-overview">
+                    <ol>
+                        <li>
+                            <strong>Input Text:</strong> You type a message or question
+                        </li>
+                        <li>
+                            <strong>Tokenization:</strong> The text is broken into tokens using a pre-defined vocabulary (typically 50,000-100,000+ tokens)
+                        </li>
+                        <li>
+                            <strong>Embedding:</strong> Each token is converted into a high-dimensional vector (series of numbers)
+                        </li>
+                        <li>
+                            <strong>Processing:</strong> These vectors flow through transformer layers that analyze relationships and context
+                        </li>
+                        <li>
+                            <strong>Prediction:</strong> The model predicts what token should come next
+                        </li>
+                        <li>
+                            <strong>Decoding:</strong> Predicted tokens are converted back into readable text
+                        </li>
+                        <li>
+                            <strong>Output:</strong> The generated text is returned to you
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Educational Resource: Understanding LLM Text Processing</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
